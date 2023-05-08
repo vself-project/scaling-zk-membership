@@ -1,0 +1,17 @@
+{
+  "name": "scaling-zk-membership",
+  "version": "1.0.0",
+  "license": "(MIT AND Apache-2.0)",
+  "scripts": {
+    "build": "cd contract && ./build.sh",
+    "deploy": "cd contract && ./deploy.sh",
+    "init_and_create": "node contract/tests/create_communities.js",
+    "test": "node contract/tests/test.js"
+  },
+  "devDependencies": {
+    "near-cli": "^3.4.2"
+  },
+  "dependencies": {
+    "shelljs": "^0.8.5"
+  }
+}
