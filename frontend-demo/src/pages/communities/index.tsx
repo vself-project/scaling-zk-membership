@@ -5,18 +5,8 @@
 import type { NextPage } from "next";
 import { useRouter } from "next/router";
 import { memo, useEffect, useState } from "react";
-//import { Row, Col } from "react-bootstrap";
 import type { ICommunityInfo } from "../../data/interfaces";
 import { useContractInteractor } from "../../utils";
-
-// TODO delete this
-const useContractInteractor = () => {
-  return {
-    viewMethod: () => {
-      return [];
-    },
-  };
-};
 
 const logoUrl = `https://firebasestorage.googleapis.com/v0/b/vself-prod.appspot.com/o/vSelf%20community.png?alt=media&token=27d6fcb7-6ffe-4718-84b6-0a7640c57bfd`;
 
@@ -94,12 +84,12 @@ const Communities: NextPage = memo(() => {
               return (
                 <div key={index}>
                   <div
-                    className="md:pt-[65px] md:pb-[30px] md:pl-[30px] md:pr-[50px] md:rounded-[20px] main-blue-bg relative mx-[50px] my-[20px] max-w-[520px] mx-auto cursor-pointer"
+                    className="flex flex-row md:pt-[65px] md:pb-[30px] md:pl-[30px] md:pr-[50px] md:rounded-[20px] main-blue-bg relative mx-[50px] my-[20px] max-w-[520px] mx-auto cursor-pointer"
                     onClick={(e) =>
                       handleNaviagte(e, `/communities/${item.community_id}`)
                     }
                   >
-                    <div className="absolute md:w-[120px] md:h-[120px] md:top-[-30px] md:right-[-10px]">
+                    <div className="md:w-[120px] md:h-[120px] md:top-[-30px] md:right-[-10px] object-cover">
                       <img
                         src={String(new URL(item.community_source_image))}
                         alt="community_source_image"
@@ -107,11 +97,11 @@ const Communities: NextPage = memo(() => {
                         height={120}
                       />
                     </div>
-                    <div className="text-left">
+                    <div className="flex flex-col justify-center text-left px-[10px]">
                       <h1 className="text-[20px] leading-[40px] tracking-[0.04em] font-extrabold font-grotesk">
                         {item.community_name}
                       </h1>
-                      <div className="text-[16px] leading-[22px] font-normal font-inter">
+                      <div className="text-[18px] leading-[22px] font-normal font-inter">
                         {item.community_description}
                       </div>
                     </div>

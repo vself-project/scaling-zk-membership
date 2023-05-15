@@ -9,7 +9,7 @@ fi
 
 echo ">> Deploying contract"
 
-readonly CONTRACT_NAME=communities_v6.sergantche.testnet
+readonly CONTRACT_NAME=communities_v7.sergantche.testnet
 readonly MASTER_ACCOUNT=sergantche.testnet
 
 # https://docs.near.org/tools/near-cli#near-dev-deploy
