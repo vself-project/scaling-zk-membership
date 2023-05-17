@@ -142,10 +142,7 @@ const Communities: NextPage = memo(() => {
   // Navigate to `claimbadge` page
   const goToClaimBagePage = async (e: any) => {
     // Create commitment from membershipKey
-    const image = wasm.mimc_hash(
-      BigInt(membershipKey),
-      BigInt(membershipKey)
-    );
+    const image = wasm.mimc_hash(BigInt(membershipKey), BigInt(membershipKey));
     const commitment = toHexString(image.image_bytes);
 
     // Navigate to claimbadge page
@@ -207,32 +204,6 @@ const Communities: NextPage = memo(() => {
         {/* Display when current user is a community owner */}
         {accountId == communityInfo?.community_owner && (
           <>
-            <hr className="mt-[30px] opacity-20" />
-            <div className="flex items-center gap-[50px]">
-              <div
-                className={`w-[125px] rounded-full ${
-                  !accountId ? "grayscale" : ""
-                }`}
-              >
-                {communityInfo && communityInfo?.badge_source_image && (
-                  <img
-                    src={communityInfo?.badge_source_image}
-                    alt="badge_source_image"
-                    width={125}
-                    height={125}
-                  />
-                )}
-              </div>
-              <div className="text-left">
-                <h1 className="text-[20px] leading-10 font-extrabold font-grotesk tracking-[0.04em] mb-[15px]">
-                  {communityInfo?.badge_name}
-                </h1>
-                <h3 className="text-[16px] leading-5 font-bold">
-                  {communityInfo?.badge_description}
-                </h3>
-              </div>
-            </div>
-            <hr className="mt-[30px] opacity-20" />
             <div className="text-left">
               <h1 className="text-[20px] text-[#3D3D3D] font-grotesk font-extrabold leading-[40px] tracking-[0.04em] my-[20px]">
                 Public Members
