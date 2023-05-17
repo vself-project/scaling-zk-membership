@@ -356,12 +356,9 @@ const Communities: NextPage = memo(() => {
                     <div className="flex-initial w-48 text-center">
                       {verificationResult ? (
                         // (<p className="font-medium text-green-500">Successful Verification</p>)
-                        <button
-                          className="w-full main-green-bg py-[5px] rounded-full"
-                          onClick={goToClaimBagePage}
-                        >
-                          Claim Badge
-                        </button>
+                        <p className="font-medium text-green-800">
+                          Successful verification
+                        </p>
                       ) : (
                         <p className="font-medium text-red-800">
                           Verification failed

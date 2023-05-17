@@ -150,17 +150,7 @@ const CommunityJoin: NextPage = memo(() => {
               </button>
             </div>
             <div className="flex-initial w-48">
-              <button
-                className="w-full main-green-bg py-[5px] rounded-full font-medium"
-                onClick={(e) =>
-                  handleNaviagte(
-                    e as any,
-                    `/communities/${router.query.communityId}/claimbadge?commitment=${commitment}`
-                  )
-                }
-              >
-                Claim badge
-              </button>
+              <></>
             </div>
           </div>
         </div>

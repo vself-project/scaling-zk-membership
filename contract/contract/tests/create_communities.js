@@ -1,7 +1,7 @@
 const sh = require("shelljs");
 const fs = require("fs");
 
-const contractName = "communities_v6.sergantche.testnet";
+const contractName = "communities_zk_membership.sergantche.testnet";
 const masterAccount = "sergantche.testnet";
 
 // Call constructor one time
@@ -28,7 +28,7 @@ const addVselfDAO = `near call ${contractName} add_community '{"community_data":
 
 // Create some communities
 if (sh.exec(addDefaultCommunity).code === 0) {
-  console.log("Add first  default community");
+  console.log("Add first default community");
 }
 
 // Bears;

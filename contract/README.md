@@ -1,7 +1,7 @@
 # vSelf communities contract
 
 This smart contract stores the community registry and allows users to manage membership.
-You can check it [here](https://explorer.testnet.near.org/accounts/communities_v4.sergantche.testnet).
+You can check it [here](https://explorer.testnet.near.org/accounts/communities_zk_membership.sergantche.testnet).
 
 ## Data structure
 

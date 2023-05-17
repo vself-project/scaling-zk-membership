@@ -1,6 +1,6 @@
 # ScalingX ZK Hackathon
 
-This repo contains all source code and relevant documentation that was created during ScalingX ZK Hackathon hackathon.
+This repo contains all source code and relevant documentation that was created during ScalingX ZK Hackathon.
 
 ## Privacy preserving onboarding
 
@@ -27,7 +27,7 @@ CSS support.
 
 Smart contract is deployed to testnet and is responsible for managing on-chain data. Currently it holds explicit list of membeship commitments for every community created. Each user can create any number of communities under ones control. Contract is implemented in Rust using [near-rs-sdk v4](https://github.com/near/near-sdk-rs), our source code and tests are in /contract folder of this repo.
 
-Deployed to: [communities_v4.sergantche.testnet](https://explorer.testnet.near.org/accounts/communities_v4.sergantche.testnet)
+Deployed to: [communities_zk_membership.sergantche.testnet](https://explorer.testnet.near.org/accounts/communities_zk_membership.sergantche.testnet)
 
 ### Shared ZKP utils
 
